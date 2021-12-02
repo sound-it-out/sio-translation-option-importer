@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  sio.translationoption.importer:
+    image: ${DOCKER_REGISTRY-}siotranslationoptionimporter
+    build:
+      context: .
+      dockerfile: src/SIO.TranslationOption.Importer/Dockerfile
+    depends_on: 
+      - sio.translationoption.importer.sql.projections
+    external_links:
+      - sio.sql.store
+  sio.translationoption.importer.sql.projections:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    container_name: sio.translationoption.importer.sql.projections
+networks:    
+  default:
+    external:
+        name: sio.network
