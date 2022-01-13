@@ -1,6 +1,6 @@
-﻿using SIO.Domain.Documents.Events;
-using SIO.Domain.TranslationOptions.Events;
-using SIO.Infrastructure.Domain;
+﻿using SIO.Infrastructure.Domain;
+using SIO.IntegrationEvents.Documents;
+using SIO.IntegrationEvents.TranslationOptions;
 
 namespace SIO.Domain.TranslationOptions.Aggregates
 {
