@@ -12,7 +12,6 @@ services:
       - sio.sql.store
   sio.translationoption.importer.sql.projections:
     image: "mcr.microsoft.com/mssql/server:2019-latest"
-    container_name: sio.translationoption.importer.sql.projections
 networks:    
   default:
     external:

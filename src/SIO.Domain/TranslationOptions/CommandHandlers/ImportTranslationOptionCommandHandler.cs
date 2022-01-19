@@ -7,6 +7,7 @@ using SIO.Domain.TranslationOptions.Aggregates;
 using SIO.Domain.TranslationOptions.Commands;
 using SIO.Infrastructure.Commands;
 using SIO.Infrastructure.Domain;
+using SIO.Infrastructure.EntityFrameworkCore.DbContexts;
 using SIO.Infrastructure.Events;
 
 namespace SIO.Domain.TranslationOptions.CommandHandlers
@@ -14,11 +15,11 @@ namespace SIO.Domain.TranslationOptions.CommandHandlers
     internal sealed class ImportTranslationOptionCommandHandler : ICommandHandler<ImportTranslationOptionCommand>
     {
         private readonly ILogger<ImportTranslationOptionCommandHandler> _logger;
-        private readonly IAggregateRepository _aggregateRepository;
+        private readonly IAggregateRepository<SIOStoreDbContext> _aggregateRepository;
         private readonly IAggregateFactory _aggregateFactory;
 
         public ImportTranslationOptionCommandHandler(ILogger<ImportTranslationOptionCommandHandler> logger,
-            IAggregateRepository aggregateRepository,
+            IAggregateRepository<SIOStoreDbContext> aggregateRepository,
             IAggregateFactory aggregateFactory)
         {
             if (logger == null)

@@ -9,8 +9,8 @@ using Grpc.Auth;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using SIO.Domain.Documents.Events;
 using SIO.Domain.TranslationOptions.Services;
+using SIO.IntegrationEvents.Documents;
 
 namespace SIO.Google.TranslationOptions.Services
 {

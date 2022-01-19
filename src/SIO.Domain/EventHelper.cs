@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Linq;
-using SIO.Domain.Documents.Events;
-using SIO.Domain.TranslationOptions.Events;
+using SIO.IntegrationEvents.Documents;
+using SIO.IntegrationEvents.TranslationOptions;
 
 namespace SIO.Domain
 {

@@ -5,8 +5,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Amazon.Polly;
 using Microsoft.Extensions.Logging;
-using SIO.Domain.Documents.Events;
 using SIO.Domain.TranslationOptions.Services;
+using SIO.IntegrationEvents.Documents;
 
 namespace SIO.AWS.TranslationOptions.Services
 {
